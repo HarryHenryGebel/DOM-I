@@ -43,7 +43,7 @@ const siteContent = {
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-// Task 1 & Task 2
+// Task 1 & Task 2 & Task 3a
 
 // set navbar ids and text
 const navAnchors = document.getElementsByTagName(
@@ -57,6 +57,7 @@ for(let anchor in anchorSpecifications) {
     // set id to object key
     anchorElement.setAttribute('id', anchor);
     anchorElement.textContent = anchorSpecifications[anchor];
+    anchorElement.style.color = "green";
   }
 }
 
