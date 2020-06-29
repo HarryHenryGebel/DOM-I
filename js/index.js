@@ -85,4 +85,8 @@ for (let i = 0; i < topContent.length; i++)
   document.querySelector(
     `body > div > section.main-content > div.top-content > div:nth-child(${childNumber}) > p`).textContent = mainContent[`${divName}-content`];
 }
+
+const middleImage = document.getElementById('middle-img');
+middleImage.setAttribute('src', mainContent['middle-img-src']);
+
 //  LocalWords: cta img LocalWords
