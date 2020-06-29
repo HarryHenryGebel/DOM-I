@@ -118,6 +118,21 @@ const footerCopyright = document.querySelector("body > div > footer > p");
 footerCopyright.setAttribute('id', 'copyright');
 footerCopyright.textContent = siteContent.footer.copyright;
 
-// Task 3
+// Task 3b
+
+const nav = document.querySelector("body > div > header > nav");
+const newFirstAnchor = document.createElement('a');
+newFirstAnchor.textContent = 'First!';
+newFirstAnchor.setAttribute('href', '#');
+newFirstAnchor.setAttribute('id', 'first-anchor');
+newFirstAnchor.style.color = "green";
+nav.prepend(newFirstAnchor);
+const newLastAnchor = document.createElement('a');
+newLastAnchor.textContent = 'Last!';
+newLastAnchor.setAttribute('href', '#');
+newLastAnchor.setAttribute('id', 'first-anchor');
+newLastAnchor.style.color = "green";
+nav.appendChild(newLastAnchor);
+
 
 //  LocalWords: cta img LocalWords
