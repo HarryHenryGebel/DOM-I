@@ -99,4 +99,21 @@ for (let i = 0; i < bottomContent.length; i++)
     `body > div > section.main-content > div.bottom-content > div:nth-child(${childNumber}) > p`).textContent = mainContent[`${divName}-content`];
 }
 
+// contact section and footer
+const contactSection = document.getElementsByClassName(
+  'contact')[0].children;
+const contactContent = siteContent.contact;
+const contactIDs = ['contact-h4', 'address', 'phone', 'email'];
+for (let i = 0; i < contactIDs.length; i++) {
+  const id = contactIDs[i];
+  const element = contactSection[i];
+  console.log(i, id, element);
+  element.setAttribute('id', id);
+  element.textContent = contactContent[id];
+}
+
+const footerCopyright = document.querySelector("body > div > footer > p");
+footerCopyright.setAttribute('id', 'copyright');
+footerCopyright.textContent = siteContent.footer.copyright;
+
 //  LocalWords: cta img LocalWords
