@@ -110,7 +110,6 @@ const contactIDs = ['contact-h4', 'address', 'phone', 'email'];
 for (let i = 0; i < contactIDs.length; i++) {
   const id = contactIDs[i];
   const element = contactSection[i];
-  console.log(i, id, element);
   element.setAttribute('id', id);
   element.textContent = contactContent[id];
 }
