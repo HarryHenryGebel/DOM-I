@@ -71,4 +71,18 @@ for(let elementName in cta) {
   }
 }
 
+// main-content
+const mainContent = siteContent['main-content'],
+      topContent = ['features', 'about'];
+for (let i = 0; i < topContent.length; i++)
+{
+  const divName = topContent[i];
+  const childNumber = i + 1;
+  // console.log(divName, childNumber, document.querySelector(
+  //   `body > div > section.main-content > div.top-content > div:nth-child(${childNumber}) > h4`));
+  document.querySelector(
+    `body > div > section.main-content > div.top-content > div:nth-child(${childNumber}) > h4`).textContent = mainContent[`${divName}-h4`];
+  document.querySelector(
+    `body > div > section.main-content > div.top-content > div:nth-child(${childNumber}) > p`).textContent = mainContent[`${divName}-content`];
+}
 //  LocalWords: cta img LocalWords
