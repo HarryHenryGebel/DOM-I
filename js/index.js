@@ -52,7 +52,6 @@ for(let anchor in anchorSpecifications) {
     // figure out which anchor we are
     const anchorIndex = parseInt(anchor[anchor.length -1]) - 1;
     const anchorElement = navAnchors[anchorIndex];
-    console.log(anchor, anchor.length, anchorIndex, anchorElement);
     // set id to object key
     anchorElement.setAttribute('id', anchor);
     anchorElement.textContent = anchorSpecifications[anchor];
