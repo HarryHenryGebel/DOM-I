@@ -73,7 +73,9 @@ for(let elementName in cta) {
 
 // main-content
 const mainContent = siteContent['main-content'],
-      topContent = ['features', 'about'];
+      topContent = ['features', 'about'],
+      bottomContent = ['services', 'product', 'vision'];
+
 for (let i = 0; i < topContent.length; i++)
 {
   const divName = topContent[i];
@@ -86,5 +88,15 @@ for (let i = 0; i < topContent.length; i++)
 
 const middleImage = document.getElementById('middle-img');
 middleImage.setAttribute('src', mainContent['middle-img-src']);
+
+for (let i = 0; i < bottomContent.length; i++)
+{
+  const divName = bottomContent[i];
+  const childNumber = i + 1;
+  document.querySelector(
+    `body > div > section.main-content > div.bottom-content > div:nth-child(${childNumber}) > h4`).textContent = mainContent[`${divName}-h4`];
+  document.querySelector(
+    `body > div > section.main-content > div.bottom-content > div:nth-child(${childNumber}) > p`).textContent = mainContent[`${divName}-content`];
+}
 
 //  LocalWords: cta img LocalWords
