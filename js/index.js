@@ -43,6 +43,8 @@ const siteContent = {
 const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
+// Task 1 & Task 2
+
 // set navbar ids and text
 const navAnchors = document.getElementsByTagName(
   'nav')[0].getElementsByTagName('a');
@@ -115,5 +117,7 @@ for (let i = 0; i < contactIDs.length; i++) {
 const footerCopyright = document.querySelector("body > div > footer > p");
 footerCopyright.setAttribute('id', 'copyright');
 footerCopyright.textContent = siteContent.footer.copyright;
+
+// Task 3
 
 //  LocalWords: cta img LocalWords
