@@ -57,3 +57,16 @@ for(let anchor in anchorSpecifications) {
     anchorElement.textContent = anchorSpecifications[anchor];
   }
 }
+
+// set cta elements
+const cta = siteContent.cta;
+for(let elementName in cta) {
+  if (elementName == 'img-src') {
+    const image = document.getElementById('cta-img');
+    image.setAttribute("src", cta['img-src']);
+  }
+  else {
+    const element = document.getElementsByTagName(elementName)[0];
+    element.textContent = cta[elementName];
+  }
+}
