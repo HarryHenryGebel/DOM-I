@@ -70,3 +70,5 @@ for(let elementName in cta) {
     element.textContent = cta[elementName];
   }
 }
+
+//  LocalWords: cta img LocalWords
