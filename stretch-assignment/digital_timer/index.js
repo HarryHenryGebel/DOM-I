@@ -23,8 +23,9 @@ function startTimer () {
 const displayDigits = [
   'msTens', 'msHundreds', 'secondOnes', 'secondTens'].map(
     x => document.getElementById(x));
+const colon = document.getElementById('colon');
 const displayElements = displayDigits.concat(
-  [document.getElementById('colon')]);
+  [colon]);
 
 function updateTimeDisplay (displayTime) {
   // cannot display times over 10 seconds
