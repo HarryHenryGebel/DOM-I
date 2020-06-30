@@ -52,7 +52,7 @@ const button = document.createElement('button');
 button.setAttribute('id', 'start-button');
 button.textContent = "Start Timer";
 button.disabled = false;
-button.style.width = "7rem";
+button.style.width = "10rem";
 button.onclick = function(event) {
   this.disabled = true;
   this.textContent = "Running";
