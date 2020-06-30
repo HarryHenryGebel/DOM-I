@@ -17,6 +17,28 @@ function startTimer () {
   const startTime = Date.now(); // store the time the timer started
   const interval = window.setInterval(timeProcessor, 10);
 }
+// get elements in time display
+const displayDigits = [
+  'msTens', 'msHundreds', 'secondOnes', 'secondTens'].map(
+    x => document.getElementById(x));
+const colon = document.getElementById('colon');
+
+function updateTimeDisplay (displayTime) {
+  // cannot display times over 10 seconds
+  if (displayTime > 10000)
+    displayTime = 10000;
+  for (let divisor = 10; divisor <= 10000; divisor * 10) {
+    // calculate which element we are setting
+    const digit = displayDigits[Math.log10(divisor)];
+    // calculate how many of that digits units have gone by
+    const digitValue = Math.floor(displayTime / divisor);
+    if (digitValue === 0) // use dash for digits we haven't reached
+      digit.textContent = "-";
+    else // otherwise, extract last digit
+      digit.textContent = (digitValue % 10).toString();
+  }
+  setTimeDisplayColor(displayTime);
+}
 const button = document.createElement('button');
 button.setAttribute('id', 'start-button');
 button.textContent = "Start Timer";
