@@ -1,4 +1,5 @@
 'use strict';
+// Completes stretch goals 1 & 2, alternate implementation of SG 3
 
 function startTimer () {
   function timeProcessor() {
@@ -63,3 +64,4 @@ body.style.flexDirection = "column";
 body.appendChild(button);
 
 //  LocalWords:  msTens msHundreds secondOnes secondTens LocalWords
+//  LocalWords:  SG
