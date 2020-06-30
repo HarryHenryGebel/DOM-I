@@ -65,5 +65,7 @@ const body = document.getElementsByTagName('body')[0];
 body.style.flexDirection = "column";
 body.appendChild(button);
 
+document.querySelector("body > div").style.fontFamily = 'monospace';
+
 //  LocalWords:  msTens msHundreds secondOnes secondTens LocalWords
-//  LocalWords:  SG
+//  LocalWords:  SG monospace
