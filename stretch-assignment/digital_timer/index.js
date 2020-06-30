@@ -16,6 +16,7 @@ function startTimer () {
   }
   const startTime = Date.now(); // store the time the timer started
   const interval = window.setInterval(timeProcessor, 10);
+  updateTimeDisplay(0); // reset to 0
 }
 
 // get elements in time display
