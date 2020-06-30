@@ -11,7 +11,6 @@ function startTimer () {
       window.clearInterval(interval);
       button.disabled = false;
       button.textContent = "Restart Timer";
-      updateTimeDisplay(0); // reset display
     }
   }
   const startTime = Date.now(); // store the time the timer started
