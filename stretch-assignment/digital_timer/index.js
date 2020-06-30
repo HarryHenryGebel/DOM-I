@@ -1,5 +1,5 @@
 'use strict';
-// Completes stretch goals 1 & 2, alternate implementation of SG 3
+// Completes stretch goals 1 2 & 4, alternate implementation of SG 3
 
 function startTimer () {
   function timeProcessor() {
