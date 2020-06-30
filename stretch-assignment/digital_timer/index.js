@@ -37,12 +37,14 @@ function updateTimeDisplay (displayTime) {
     // calculate how many of that digits units have gone by
     const digitValue = Math.floor(displayTime / divisor);
     if (digitValue === 0) // use dash for digits we haven't reached
-      digit.textContent = "-";
+      digit.textContent = "*";
     else // otherwise, extract last digit
       digit.textContent = (digitValue % 10).toString();
   }
   setTimeDisplayColor(displayTime);
 }
+// initialize display
+updateTimeDisplay(0);
 
 function setTimeDisplayColor(displayTime) {
   const color = displayTime < 10000 ? 'black' : 'red';
