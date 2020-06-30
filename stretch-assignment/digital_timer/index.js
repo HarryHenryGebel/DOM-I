@@ -44,7 +44,7 @@ function updateTimeDisplay (displayTime) {
 
 function setTimeDisplayColor(displayTime) {
   const color = displayTime < 10000 ? 'black' : 'red';
-  for (element of displayElements)
+  for (let element of displayElements)
     element.style.color = color;
 }
 
