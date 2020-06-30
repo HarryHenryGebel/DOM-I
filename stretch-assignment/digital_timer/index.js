@@ -17,11 +17,13 @@ function startTimer () {
   const startTime = Date.now(); // store the time the timer started
   const interval = window.setInterval(timeProcessor, 10);
 }
+
 // get elements in time display
 const displayDigits = [
   'msTens', 'msHundreds', 'secondOnes', 'secondTens'].map(
     x => document.getElementById(x));
-const colon = document.getElementById('colon');
+const displayElements = displayDigits.concat(
+  [document.getElementById('colon')]);
 
 function updateTimeDisplay (displayTime) {
   // cannot display times over 10 seconds
@@ -39,6 +41,13 @@ function updateTimeDisplay (displayTime) {
   }
   setTimeDisplayColor(displayTime);
 }
+
+function setTimeDisplayColor(displayTime) {
+  const color = displayTime < 10000 ? 'black' : 'red';
+  for (element of displayElements)
+    element.style.color = color;
+}
+
 const button = document.createElement('button');
 button.setAttribute('id', 'start-button');
 button.textContent = "Start Timer";
