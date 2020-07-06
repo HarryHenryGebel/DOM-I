@@ -114,3 +114,24 @@ dist
 .yarn/unplugged
 .yarn/build-state.yml
 .pnp.*
+
+# Compiled
+*.elc
+
+# Packaging
+.cask
+
+# Backup files
+*~
+
+# Undo-tree save-files
+*.~undo-tree
+
+# Autosave
+\#*\#
+
+# impatient-mode sockets
+.\#*
+
+# scratch directory for experimental work
+scratch
