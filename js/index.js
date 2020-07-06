@@ -128,8 +128,9 @@ newFirstAnchor.setAttribute('id', 'first-anchor');
 newFirstAnchor.style.color = "green";
 nav.prepend(newFirstAnchor);
 const newLastAnchor = document.createElement('a');
-newLastAnchor.textContent = 'Last!';
-newLastAnchor.setAttribute('href', '#');
+newLastAnchor.textContent = 'Stretch!';
+newLastAnchor.setAttribute('href',
+                           'stretch-assignment/digital_timer/index.html');
 newLastAnchor.setAttribute('id', 'first-anchor');
 newLastAnchor.style.color = "green";
 nav.appendChild(newLastAnchor);
