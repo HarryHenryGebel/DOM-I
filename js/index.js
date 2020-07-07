@@ -122,8 +122,8 @@ footerCopyright.textContent = siteContent.footer.copyright;
 
 const nav = document.querySelector("body > div > header > nav");
 const newFirstAnchor = document.createElement('a');
-newFirstAnchor.textContent = 'First!';
-newFirstAnchor.setAttribute('href', '#');
+newFirstAnchor.textContent = 'Documentation!';
+newFirstAnchor.setAttribute('href', 'docs');
 newFirstAnchor.setAttribute('id', 'first-anchor');
 newFirstAnchor.style.color = "green";
 nav.prepend(newFirstAnchor);

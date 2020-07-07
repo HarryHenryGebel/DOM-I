@@ -1,7 +1,13 @@
 'use strict';
 // Completes stretch goals 1 2 & 4, alternate implementation of SG 3
 
+/**
+ * Start the timer
+ */
 function startTimer () {
+  /**
+   * Process the interval
+   */
   function timeProcessor() {
     // calculate time passed and update display
     const timePassed = Date.now() - startTime;
@@ -27,6 +33,10 @@ const colon = document.getElementById('colon');
 const displayElements = displayDigits.concat(
   [colon]);
 
+/**
+ * Update the display and set the color
+ * @param {number} displayTime value to set display to
+ */
 function updateTimeDisplay (displayTime) {
   // cannot display times over 10 seconds
   if (displayTime > 10000)
@@ -46,6 +56,10 @@ function updateTimeDisplay (displayTime) {
 // initialize display
 updateTimeDisplay(0);
 
+/**
+ * Set the color of the display
+ * @param {number} displayTime value to set display to
+ */
 function setTimeDisplayColor(displayTime) {
   const color = displayTime < 10000 ? 'black' : 'red';
   for (let element of displayElements)
